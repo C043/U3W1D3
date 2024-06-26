@@ -14,11 +14,7 @@ const App = () => (
     <MyNav />;
     <Welcome />
     <BtnFilter title="Horror" />
-    <Container>
-      <Row className="gy-4 align-items-center">
-        <BookList genre={horrorBooks} />
-      </Row>
-    </Container>
+    <BookList genre={horrorBooks} />
     <MyFooter />
   </>
 );
