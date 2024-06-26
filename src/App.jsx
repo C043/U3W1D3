@@ -6,8 +6,6 @@ import MyFooter from "./components/MyFooter";
 import BookList from "./components/BookList";
 
 import horrorBooks from "./data/horror.json";
-import BtnFilter from "./components/BtnFilter";
-import { Container, Row } from "react-bootstrap";
 
 const App = () => (
   <>
