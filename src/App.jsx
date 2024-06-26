@@ -13,7 +13,6 @@ const App = () => (
   <>
     <MyNav />;
     <Welcome />
-    <BtnFilter title="Horror" />
     <BookList genre={horrorBooks} />
     <MyFooter />
   </>
