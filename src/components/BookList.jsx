@@ -22,20 +22,18 @@ class BookList extends Component {
           </InputGroup>
         </Form>
         <Row className="gy-4 align-items-center">
-          {this.props.genre.map(book => {
-            if (book.title.toLowerCase().includes(this.state.query.toLowerCase())) {
-              return (
-                <SingleBook
-                  key={book.asin}
-                  book={{
-                    title: book.title,
-                    img: book.img,
-                    price: book.price,
-                  }}
-                />
-              );
-            }
-          })}
+          {this.props.genre
+            .filter(book => book.title.toLowerCase().includes(this.state.query.toLowerCase()))
+            .map(book => (
+              <SingleBook
+                key={book.asin}
+                book={{
+                  title: book.title,
+                  img: book.img,
+                  price: book.price,
+                }}
+              />
+            ))}
         </Row>
       </Container>
     );
